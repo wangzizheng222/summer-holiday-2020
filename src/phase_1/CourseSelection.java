@@ -24,7 +24,6 @@ public class CourseSelection {
                     System.out.println("please enter the right number");
             }
         }
-
     }
 
     //学生信息管理
@@ -338,14 +337,32 @@ public class CourseSelection {
         List<Courses> coursesList=ReadData.readCourses();
 
         Scanner input=new Scanner(System.in);
-        System.out.println("enter your id:");
-        String id=input.nextLine();
+        int pos;
 
         //查找该学生的位置
-        int pos = 0;
+        pos = -1;
+        System.out.println("enter your id:");
+        String id=input.nextLine();
+        //匹配位置
         for (int i=0;i<studentCoursesList.size();i++){
             if (studentCoursesList.get(i).getId().equals(id)){
                 pos=i;
+                break;
+            }
+        }
+
+        //输入错误后，重新输入学号
+        while (pos==-1){
+            System.out.println("未找到该学生");
+            //查找该学生的位置
+            pos = -1;
+            System.out.println("enter your id:");
+            id=input.nextLine();
+            for (int i=0;i<studentCoursesList.size();i++){
+                if (studentCoursesList.get(i).getId().equals(id)){
+                    pos=i;
+                    break;
+                }
             }
         }
 
