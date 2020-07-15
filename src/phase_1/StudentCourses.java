@@ -1,8 +1,15 @@
 package phase_1;
 
-public class StudentCourses {
+import java.io.Serializable;
+
+public class StudentCourses implements Serializable {
     private String id;
     private int code;
+
+    public StudentCourses(String id,int code){
+        this.id = id;
+        this.code=code;
+    }
 
     public String getId() {
         return id;

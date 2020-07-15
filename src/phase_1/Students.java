@@ -1,24 +1,26 @@
 package phase_1;
 
-public class Students {
-    private int age;
+import java.io.Serializable;
+
+public class Students implements Serializable {
+    private String id;
     private String name;
     private String sex;
     private String birthday;
 
-    public Students(int age,String name,String sex,String birthday){
-        this.age=age;
+    public Students(String id,String name,String sex,String birthday){
+        this.id=id;
         this.name=name;
         this.sex=sex;
         this.birthday=birthday;
     }
 
-    public int getAge() {
-        return age;
+    public String getId() {
+        return id;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAge(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -48,7 +50,7 @@ public class Students {
     @Override
     public String toString() {
         return "Students{" +
-                "age=" + age +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", sex='" + sex + '\'' +
                 ", birthday='" + birthday + '\'' +

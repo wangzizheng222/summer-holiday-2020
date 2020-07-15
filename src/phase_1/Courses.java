@@ -1,6 +1,8 @@
 package phase_1;
 
-public class Courses {
+import java.io.Serializable;
+
+public class Courses implements Serializable {
     private int code;
     private String  name;
     private int year;
