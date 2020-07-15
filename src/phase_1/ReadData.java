@@ -11,7 +11,7 @@ import java.util.List;
  * 从文件中读取数据
  */
 public class ReadData {
-    public List<Students> readStudents() throws IOException {
+    public static List<Students> readStudents() throws IOException {
         List<Students> studentsList=new ArrayList<>();
 
         ObjectInputStream ois=new ObjectInputStream(
@@ -28,7 +28,7 @@ public class ReadData {
         return studentsList;
     }
 
-    public List<Courses> readCourses() throws IOException {
+    public static List<Courses> readCourses() throws IOException {
         List<Courses> coursesList = new ArrayList<>();
 
         ObjectInputStream ois=new ObjectInputStream(
@@ -38,14 +38,14 @@ public class ReadData {
                 coursesList.add((Courses) ois.readObject());
             }
             catch (IOException | ClassNotFoundException e){
-                System.out.println("成功读取学生信息");
+                System.out.println("成功读取课程信息");
                 break;
             }
         }
         return coursesList;
     }
 
-    public List<StudentCourses> readStudentCourses() throws IOException {
+    public static List<StudentCourses> readStudentCourses() throws IOException {
         List<StudentCourses> studentCoursesList = new ArrayList<>();
 
         ObjectInputStream ois=new ObjectInputStream(
@@ -55,7 +55,7 @@ public class ReadData {
                 studentCoursesList.add((StudentCourses) ois.readObject());
             }
             catch (IOException | ClassNotFoundException e){
-                System.out.println("成功读取学生信息");
+                System.out.println("成功读取学生选课信息");
                 break;
             }
         }

@@ -1,12 +1,13 @@
 package phase_1;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class StudentCourses implements Serializable {
     private String id;
-    private int code;
+    private List<Integer> code;
 
-    public StudentCourses(String id,int code){
+    public StudentCourses(String id,List<Integer> code){
         this.id = id;
         this.code=code;
     }
@@ -19,11 +20,11 @@ public class StudentCourses implements Serializable {
         this.id = id;
     }
 
-    public int getCode() {
+    public List<Integer> getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(List<Integer> code) {
         this.code = code;
     }
 

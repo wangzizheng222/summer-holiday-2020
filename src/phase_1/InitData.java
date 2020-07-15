@@ -12,6 +12,12 @@ public class InitData {
     List<Courses> coursesList = new ArrayList<>();
     List<StudentCourses> studentCoursesList = new ArrayList<>();
 
+    public static void main(String[] args) throws IOException {
+        initStudents();
+        initCourses();
+        initStudentCourse();
+    }
+
     /**
      * 创建学生数据
      */
@@ -57,7 +63,9 @@ public class InitData {
     public static void initStudentCourse() throws IOException {
         List<StudentCourses> studentCoursesList = new ArrayList<>();
 
-        studentCoursesList.add(new StudentCourses("18",10));
+        studentCoursesList.add(new StudentCourses("18", new ArrayList<>()));
+        studentCoursesList.add(new StudentCourses("19",new ArrayList<>()));
+        studentCoursesList.add(new StudentCourses("20",new ArrayList<>()));
 
         ObjectOutputStream oos=new ObjectOutputStream(
                 new FileOutputStream(new File("src//phase_1//data//student_courses.dat"),true));
