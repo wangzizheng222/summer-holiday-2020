@@ -1,7 +1,10 @@
 package phase_1;
 
 import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -63,6 +66,15 @@ public class CourseSelection {
                 sex=input.nextLine();
                 System.out.println("Enter the birthday of the student that you want to add");
                 birthday=input.nextLine();
+                try
+                {
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd ");
+                    Date date = sdf.parse(birthday);
+                }
+                catch (ParseException e)
+                {
+                    System.out.println(e.getMessage());
+                }
 
                 //加入列表
                 studentsList.add(new Students(id,name,sex,birthday));
@@ -97,7 +109,8 @@ public class CourseSelection {
             }
             else if (selectNumber==2){
                 System.out.println("enter the id you want to remove");
-                studentsList.remove(input.nextInt()-1);
+                int remove_pos=input.nextInt()-1;
+                studentsList.remove(remove_pos);
                 System.out.println("已成功删除，学生信息列表为：");
 
                 //向文件中写入
@@ -109,13 +122,24 @@ public class CourseSelection {
                 }
                 oos.flush();
 
+                //同时更新选课列表
+                List<StudentCourses> studentCoursesList = ReadData.readStudentCourses();
+                studentCoursesList.remove(remove_pos);
+                ObjectOutputStream oos_2=new ObjectOutputStream(new FileOutputStream(
+                        new File("src//phase_1//data//student_courses.dat")
+                ));
+                for (StudentCourses studentCourses:studentCoursesList){
+                    oos_2.writeObject(studentCourses);
+                }
+                oos_2.flush();
+
                 //重新读取数据
                 studentsList=ReadData.readStudents();
 
                 //打印列表
                 for (int i=0;i<studentsList.size();i++){
                     Students student=studentsList.get(i);
-                    System.out.print(i+",");
+                    System.out.print(i+1+",");
                     System.out.println(student.toString());
                 }
             }
