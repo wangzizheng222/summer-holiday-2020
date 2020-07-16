@@ -68,7 +68,7 @@ public class CourseSelection {
                 birthday=input.nextLine();
                 try
                 {
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd ");
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                     Date date = sdf.parse(birthday);
                     System.out.println(date);
                 }
