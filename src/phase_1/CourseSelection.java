@@ -70,6 +70,7 @@ public class CourseSelection {
                 {
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd ");
                     Date date = sdf.parse(birthday);
+                    System.out.println(date);
                 }
                 catch (ParseException e)
                 {
