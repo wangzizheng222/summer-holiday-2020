@@ -3,125 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <title>Exercise_2</title>
-    <!-- 样式文件 -->
-    <link rel="stylesheet" href="./umeditor/themes/default/css/umeditor.css">
-    <!-- 引用jquery -->
-    <script src="./umeditor/third-party/jquery.min.js"></script>
-    <!-- 配置文件 -->
-    <script type="text/javascript" src="./umeditor/umeditor.config.js"></script>
-    <!-- 编辑器源码文件 -->
-    <script type="text/javascript" src="./umeditor/umeditor.js"></script>
-    <!-- 语言包文件 -->
-    <script type="text/javascript" src="./umeditor/lang/zh-cn/zh-cn.js"></script>
-    <!-- 实例化编辑器代码 -->
-    <script type="text/javascript">
-        $(function(){
-            window.um = UM.getEditor('container', {
-                /* 传入配置参数,可配参数列表看umeditor.config.js */
-                toolbar: ['undo redo | bold italic underline']
-            });
-        });
-    </script>
+
+
+    <style>
+        .title{
+            background-color: darkgrey;
+            height: 40px;
+            margin: 0 auto;
+            line-height: 40px;
+        }
+
+    </style>
+
 </head>
 <body>
-<p>产品基本信息</p>
+<p class="title">产品基本信息</p>
 
+<div id="value">
+    <label style="color: red;padding-left: 500px">*</label>
 <label>产品名称</label><label>
-    <input type="text">
+    <img src="blue_img.PNG" width="20" height="20">
+    <input type="text" placeholder="如：PU女士手提包">
 </label>
 <br>
+
+    <label style="color: red;padding-left: 500px">*</label>
 <label>产品型号</label><label>
+    <img src="blue_img.PNG" width="20" height="20">
     <input type="text">
 </label>
 <br>
-<label>产品图片</label><label>
-    <input type="radio"><label>上传单张图片</label>
-    <input type="radio"><label>上传多张图片</label>
+<label style="padding-left: 512px">产品图片</label><label>
+    <img src="blue_img.PNG" width="20" height="20">
+    <input type="radio" name="pic_upload"><label>上传单张图片</label>
+    <input type="radio" name="pic_upload"><label>上传多张图片</label>
     <label>您已提交10个多图产品，还可以提交0个</label>
 </label>
 <br>
-<button>本地上传</button>
-<button>从图片库选取</button>
+    <div style="padding-left: 570px">
+        <button>本地上传</button>
+        <button>从图片库选取</button>
+    </div>
+
+    <div style="padding-left: 570px">
+        <p style="font-weight: 100">最多添加10个多图产品，每个多图产品最多展示6张图片</p>
+        <p style="font-weight: 100">jpg或jpeg格式，不超过300k</p>
+    </div>
+    <label style="color: red;padding-left: 515px">*</label>
+    <label>关键词</label><label>
+    <img src="blue_img.PNG" width="20" height="20">
+    <input type="text">
+</label>
+<a style="color: blue">关键词建议</a>
 <br>
-<p>最多添加10个多图产品，每个多图产品最多展示6张图片</p>
-<p>jpg或jpeg格式，不超过300k</p>
-<label>关键词</label><input type="text">
-<a>关键词建议</a>
-<br>
-<a>添加逻辑关键词</a>
-<p>请在每个文本框中输入一个用于描述您产品的关键词，并控制在48个字符以内</p>
+<a style="padding-left: 570px;color: blue">添加更多关键词</a>
+<p style="padding-left: 570px;font-weight: 100">请在每个文本框中输入一个用于描述您产品的关键词，并控制在48个字符以内</p>
+    <label style="color: red;padding-left: 500px">*</label>
 <label>产品类别</label>
 <button>选择目录</button><label>找不到想要的目录？</label>
-<a>点这里</a>
+<a style="color: blue">点这里</a>
 <br>
-<label>产品分组</label>
-<select>
-    <option></option>
-</select>
-<br>
-<label>产品描述</label>
-<input type="radio"><label>富文本</label>
-<input type="radio"><label>纯文本</label>
-<label>您已提交23个富文本产品，还可继续提交</label>
-<br>
-<!-- 加载编辑器的容器 -->
-<script id="container" name="content" style="width:600px;height:200px;" type="text/plain">
-    var um = UM.getEditor('myEditor',{
-            //这里可以选择自己需要的工具按钮名称,此处仅选择如下七个
-            toolbar:['fullscreen source undo redo bold italic underline'],
-            //focus时自动清空初始化时的内容
-            autoClearinitialContent:true,
-            //关闭elementPath
-            elementPathEnabled:false,
-            //默认的编辑区域高度
-            initialFrameHeight:300
-            //更多其他参数，请参考umeditor.config.js中的配置项
-        });
-</script>
 
-<p>产品贸易</p>
+<label style="padding-left: 512px">产品分组</label>
+    <label>
+        <select>
+            <option>请选择产品分组</option>
+        </select>
+    </label>
+    <br>
+
+
+</div>
+
+<p class="title">产品贸易
+</p>
+<label style="color: red;padding-left: 488px">*</label>
 <label>最小起订量</label><input type="text">
-<select>
-    <option>个</option>
-</select>
+<label>
+    <select style="width: 100px">
+        <option>个</option>
+    </select>
+</label>
 <label>FOB价格（U8D）</label>
-<select>
-    <option>个</option>
-</select>
+<label>
+    <select style="width: 100px">
+        <option>个</option>
+    </select>
+</label>
 <br>
-<a>添加价格区间</a>
-<label>港口</label><input type="text">
+<a style="padding-left: 590px;color: blue">添加价格区间</a>
 <br>
+<label style="padding-left: 547px">港口</label><input type="text">
+<br>
+<label style="color: red;padding-left: 500px">*</label>
 <label>支付方式</label>
 
-<input type="checkbox"><label>UC</label>
-<input type="checkbox"><label>T/T</label>
-<input type="checkbox"><label>D/P</label>
-<input type="checkbox"><label>Paypal</label>
-<input type="checkbox"><label>Money Gram</label>
-<input type="checkbox"><label>Western Union</label>
-<input type="checkbox"><label>Others</label>
+
+<label>
+    <input type="checkbox">
+</label><label>UC</label>
+<label>
+    <input type="checkbox">
+</label><label>T/T</label>
+<label>
+    <input type="checkbox">
+</label><label>D/P</label>
+<label>
+    <input type="checkbox">
+</label><label>Paypal</label>
+<label>
+    <input type="checkbox">
+</label><label>Money Gram</label>
+<label>
+    <input type="checkbox">
+</label><label>Western Union</label>
+<label>
+    <input type="checkbox">
+</label><label>Others</label>
 <br>
 
-<p>展示字段自定义</p>
-<label>交易条件</label>
-<input type="checkbox"><label>港口</label>
-<input type="checkbox"><label>支付方式</label>
+
+<p class="title">展示字段自定义
+    <img src="blue_img.PNG" width="20" height="20" alt="blue">
+    <label style="font-weight: 100">可以从产品属性、自定义属性、交易条件中选择2个自定义信息用于展示厅产品介绍页面的优先展示</label>
+</p>
+<label style="padding-left: 512px">交易条件</label>
+<label>
+    <input type="checkbox">
+</label><label>港口</label>
+<label>
+    <input type="checkbox">
+</label><label>支付方式</label>
 <br>
-<label>产品属性</label>
-<input type="checkbox"><label>外观</label>
-<input type="checkbox"><label>应用</label>
-<input type="checkbox"><label>成分</label>
-<input type="checkbox"><label>目标市场</label>
+<label style="padding-left: 512px">产品属性</label>
+<label>
+    <input type="checkbox">
+</label><label>外观</label>
+<label>
+    <input type="checkbox">
+</label><label>应用</label>
+<label>
+    <input type="checkbox">
+</label><label>成分</label>
+<label>
+    <input type="checkbox">
+</label><label>目标市场</label>
+
 <br>
-<label>自定义属性</label>
-<input type="checkbox"><label>FOB</label>
-<input type="checkbox"><label>CFR</label>
-<input type="checkbox"><label>CIF</label>
-<input type="checkbox"><label>DAT</label>
-<input type="checkbox"><label>FAS</label>
-<input type="checkbox"><label>DDP</label>
-<input type="checkbox"><label>DAP</label>
-<input type="checkbox"><label>FOB</label>
+
+<label style="padding-left: 497px">自定义属性</label>
+<label>
+    <input type="checkbox">
+</label><label>FOB</label>
+<label>
+    <input type="checkbox">
+</label><label>CFR</label>
+<label>
+    <input type="checkbox">
+</label><label>CIF</label>
+<label>
+    <input type="checkbox">
+</label><label>DAT</label>
+<label>
+    <input type="checkbox">
+</label><label>FAS</label>
+<label>
+    <input type="checkbox">
+</label><label>DDP</label>
+<label>
+    <input type="checkbox">
+</label><label>DAP</label>
+<label>
+    <input type="checkbox">
+</label><label>FOB</label>
 </body>
 </html>
