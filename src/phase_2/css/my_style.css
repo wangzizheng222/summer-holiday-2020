@@ -74,36 +74,11 @@ nav{
     height: 270px;
 }
 
-.right_button.last_button.tuiguang{
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 7px;
-}
-
-.right_button.last_button.tuiguang.first{
-    font-size: 15px;
-    color: #333;
-}
-
-.right_button.last_button.tuiguang.second{
-    margin-top: 4px;
-    font-size: 13px;
-    color: #999
-}
-
-.my_list{
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px
-}
-
-
-
 footer{
     position: absolute;
     bottom: 0;
     height: 100px;
+    top: 800px;
     left: 200px;
     text-align: center;
     width: 50%;
@@ -134,8 +109,8 @@ footer img{
     padding: 5px;
 }
 
-.article_list{
-
+body > div.zhichang > div{
+    width: 650px;
 }
 
 nav{
