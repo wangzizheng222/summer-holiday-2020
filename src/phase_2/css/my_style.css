@@ -127,3 +127,13 @@ nav{
 .download_button:hover,.download_button:focus{
     background-color: #F5F5F5;
 }
+
+.search{
+    border-radius: 20px;
+    border: none;
+    background-color: #EEEEEE;
+}
+
+.search:focus{
+    outline: none;
+}
