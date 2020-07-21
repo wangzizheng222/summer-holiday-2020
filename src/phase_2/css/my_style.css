@@ -1,0 +1,146 @@
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 1050;
+}
+
+.logo{
+    float: left;
+    padding: 0;
+    height: 58px;
+}
+
+.write_article{
+    float: right;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 20px;
+    margin: 8px 12px 0;
+    line-height: 40px;
+    background-color: #ea6f5a;
+    text-align: center;
+}
+
+.write_article:focus,.write_article:hover{
+    color: #fff;
+    background-color: #ec6149
+}
+
+.sign_up{
+    float: right;
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+    margin: 8px 12px 1px 0;
+    color: #ea6f5a;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid #ec6149;
+    text-align: center;
+    line-height: 40px;
+}
+
+.sign_up:focus,.sign_up:hover{
+    color: #ec6149;
+    background-color: #FEF7F6
+}
+
+.sign_in,.sign_in:focus,.sign_in:hover{
+    width: 80px;
+    height: 40px;
+    float: right;
+    font-size: 15px;
+    margin: 8px 1px 2px 0;
+    line-height: 40px;
+    color: #969696;
+}
+
+.zhichang{
+    margin-top: 70px;
+    margin-left: 250px;
+    margin-right: 5px;
+    float: left;
+    width: 485px;
+    height: 210px;
+}
+
+.zhichang img{
+    border-radius: 5px;
+    width: 650px;
+    height: 270px;
+}
+
+.right_button.last_button.tuiguang{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+}
+
+.right_button.last_button.tuiguang.first{
+    font-size: 15px;
+    color: #333;
+}
+
+.right_button.last_button.tuiguang.second{
+    margin-top: 4px;
+    font-size: 13px;
+    color: #999
+}
+
+.my_list{
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    left: 200px;
+    text-align: center;
+    width: 50%;
+    font-weight: 100;
+    font-size: 13px;
+    color: #c8c8c8
+}
+
+footer a{
+    font-weight: 100;
+    font-size: 13px;
+    color: #7b7b7b
+}
+
+footer img{
+    height: 30px;
+}
+
+.right_button{
+    margin-top: 60px;
+    margin-right: 300px;
+    float: right;
+    width: 218px;
+}
+
+.right_button img{
+    height: 55px;
+    padding: 5px;
+}
+
+.article_list{
+
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
