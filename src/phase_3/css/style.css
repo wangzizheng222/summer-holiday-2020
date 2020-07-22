@@ -36,3 +36,54 @@
     height: 50px;
     text-align: center;
 }
+
+.table tr:hover{
+    background-color: #c8c8c8;
+}
+
+.add{
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    left: 500px;
+    top: 150px;
+    background-color: #7b7b7b;
+
+    text-align: center;
+
+    display: none;
+}
+
+.check{
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    left: 500px;
+    top: 150px;
+    background-color: red;
+}
+
+input[type="text"]{
+    font-size: 1em;
+    color: #fff;
+    font-weight:100;
+    border: none;
+    border-bottom: solid 3px #fff;
+    background-color: transparent;
+    width: 240px;
+    height: 40px;
+    text-align: center;
+}
+
+input:focus,input:valid{
+    box-shadow: none;
+    outline: none;
+}
+
+input[type="checkbox"]{
+    width: 80px;
+}
+
+input[type="radio"]{
+    width: 80px;
+}

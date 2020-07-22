@@ -14,7 +14,7 @@
 </header>
 
 <div class="control_button">
-    <button class="btn">新增</button>
+    <button class="btn" onclick="show_add()">新增</button>
     <button class="btn">删除</button>
     <button class="btn">下一页</button>
     <button class="btn">上一页</button>
@@ -46,10 +46,133 @@
 </footer>
 
 <script>
-    var students=localStorage.my_data;
+    save_data(init_data())
+    let students = localStorage.my_data;
     students=JSON.parse(students);
     print_table(students);
 </script>
+
+<div class="add" id="add">
+    <h2>增加学生数据</h2>
+    <div>
+        学号
+        <input type="text" id="id">
+    </div>
+
+    <div>
+        姓名
+        <input type="text" id="name">
+    </div>
+
+    <div>
+        性别
+        <label>
+            男
+            <input type="radio" id="sex_male" name="sex" checked>
+        </label>
+        <label>
+            女
+            <input type="radio" id="sex_female" name="sex">
+        </label>
+    </div>
+
+    <div>
+        学院
+        <select style="height: 40px" id="college">
+            <option>
+                人工智能学院
+            </option>
+            <option>
+                理学院
+            </option>
+            <option>
+                会计学院
+            </option>
+        </select>
+    </div>
+
+    <div>
+        专业
+        <input type="text" id="major">
+    </div>
+
+    <div>
+        年级
+        <input type="text" id="grade">
+    </div>
+
+    <div>
+        班级
+        <input type="text" id="class">
+    </div>
+
+    <div>
+        年龄
+        <input type="text" id="age">
+    </div>
+
+    <div>
+        爱好
+        <input type="text" id="hobby">
+    </div>
+
+    <div>
+        <button class="btn" onclick="submit_add()">提交</button>
+        <button class="btn" onclick="cancel_add()">取消</button>
+    </div>
+
+    <script>
+        function cancel_add() {
+            document.getElementById("add").style.display="none";
+        }
+
+        function submit_add() {
+            class Students{
+
+            }
+
+            const new_student = new Students();
+
+            let sex;
+            if (document.getElementsByName("sex")[0].checked){
+                sex="男";
+            }
+            else sex="女";
+
+            new_student.id=document.getElementById("id").value;
+            new_student.name=document.getElementById("name").value;
+            new_student.sex=sex;
+            new_student.college=document.getElementById("college").value;
+            new_student.major=document.getElementById("major").value;
+            new_student.grade=document.getElementById("grade").value;
+            new_student.class=document.getElementById("class").value;
+            new_student.age=document.getElementById("age").value;
+            new_student.hobby=document.getElementById("hobby").value;
+
+            if (new_student.id!=="" && new_student.name!=="" && new_student.sex!==""
+            && new_student.college!=="" && new_student.major!=="" && new_student.grade!==""
+            && new_student.college!=="" && new_student.age!=="" && new_student.hobby!==""){
+                //新增数据
+                students[students.length]=new_student;
+                //存储数据
+                save_data(students);
+                //刷新界面
+                print_table(students);
+
+                cancel_add();
+            }
+            else {
+                alert("所有字段不能为空")
+            }
+
+        }
+    </script>
+
+</div>
+
+<div class="check" hidden>
+
+</div>
 
 </body>
 </html>

@@ -19,7 +19,7 @@ function print_table(students) {
             "            <td width=\"80\">"+students[i].hobby+"</td>\n" +
             "            <td width=\"100\">"+"<a>查看</a><a>修改</a>"+"</td>\n" +
             "        </tr>"
-        console.log(i)
+
     }
 
     inner_value="<tr>\n" +
@@ -45,4 +45,8 @@ function print_table(students) {
 function save_data(students) {
     var value=JSON.stringify(students);
     localStorage.setItem("my_data",value);
+}
+
+function show_add() {
+    document.getElementById("add").style.display="block";
 }
