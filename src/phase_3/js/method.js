@@ -237,3 +237,10 @@ function last_page() {
     }
 
 }
+
+function refresh_data() {
+    save_data(init_data())
+    var students = localStorage.my_data;
+    students=JSON.parse(students);
+    print_table(students);
+}

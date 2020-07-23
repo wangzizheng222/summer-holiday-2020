@@ -16,10 +16,11 @@
 </header>
 
 <div class="control_button">
-    <button class="btn" onclick="show_add()">新增</button>
-    <button class="btn" onclick="remove(students)">删除</button>
-    <button class="btn" onclick="next_page()">下一页</button>
-    <button class="btn" onclick="last_page()">上一页</button>
+    <button class="btn" onclick="show_add()" id="add_button">新增</button>
+    <button class="btn" onclick="remove(students)" id="remove_button">删除</button>
+    <button class="btn" onclick="refresh_data()">初始化数据</button>
+    <button class="btn" onclick="next_page()" id="next_button">下一页</button>
+    <button class="btn" onclick="last_page()" id="last_button">上一页</button>
 </div>
 
 <div>
@@ -33,7 +34,6 @@
 </footer>
 
 <script>
-    save_data(init_data())
     var students = localStorage.my_data;
     students=JSON.parse(students);
     print_table(students);
