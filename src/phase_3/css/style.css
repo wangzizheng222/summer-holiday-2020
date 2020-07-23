@@ -60,7 +60,28 @@
     height: 600px;
     left: 500px;
     top: 150px;
-    background-color: red;
+    background-color: #7b7b7b;
+
+    text-align: center;
+
+    display: none;
+}
+
+.check div{
+    height: 50px;
+}
+
+.alt{
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    left: 500px;
+    top: 150px;
+    background-color: #7b7b7b;
+
+    text-align: center;
+
+    display: none;
 }
 
 input[type="text"]{
@@ -86,4 +107,8 @@ input[type="checkbox"]{
 
 input[type="radio"]{
     width: 80px;
+}
+
+table a:hover{
+    color: red;
 }
