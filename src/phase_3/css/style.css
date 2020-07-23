@@ -111,4 +111,5 @@ input[type="radio"]{
 
 table a:hover{
     color: red;
+    cursor: pointer;
 }

@@ -1,7 +1,10 @@
 function print_table(students) {
+    //向上取整
+    document.getElementById("page").value=Math.ceil(students.length/10);
+    let current_page = document.getElementById("current_page").value;
+    current_page=parseInt(current_page);
     var inner_value="";
-    console.log(students.length);
-    for (let i=0;i<students.length;i++){
+    for (let i=(current_page-1)*10;i<(current_page-1)*10+10;i++){
 
         inner_value=inner_value+"<tr>\n" +
             "            <td>\n" +
@@ -202,4 +205,28 @@ function submit_alt() {
 
 function alt_cancel() {
     document.getElementById("alt").style.display="none";
+}
+
+function next_page() {
+    if (parseInt(document.getElementById("current_page").value)
+    <parseInt(document.getElementById("page").value)){
+        document.getElementById("current_page").value=parseInt(document.getElementById("current_page").value)+1;
+        print_table(students);
+    }
+    else {
+        alert("当前已是最后一页");
+    }
+
+}
+
+function last_page() {
+    if (parseInt(document.getElementById("current_page").value)
+        >1){
+        document.getElementById("current_page").value=parseInt(document.getElementById("current_page").value)-1;
+        print_table(students);
+    }
+    else {
+        alert("当前已是第一页");
+    }
+
 }

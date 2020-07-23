@@ -59,4 +59,3 @@ function init_data() {
 
     return student;
 }
-
