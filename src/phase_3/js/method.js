@@ -3,8 +3,15 @@ function print_table(students) {
     document.getElementById("page").value=Math.ceil(students.length/10);
     let current_page = document.getElementById("current_page").value;
     current_page=parseInt(current_page);
+
+    //单页不足10个对象时
+    var stop_index=(current_page-1)*10+10;
+    if (stop_index>students.length){
+        stop_index=students.length;
+    }
+
     var inner_value="";
-    for (let i=(current_page-1)*10;i<(current_page-1)*10+10;i++){
+    for (let i=(current_page-1)*10;i<stop_index;i++){
 
         inner_value=inner_value+"<tr>\n" +
             "            <td>\n" +
