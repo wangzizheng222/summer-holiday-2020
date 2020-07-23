@@ -214,7 +214,7 @@ function alt_cancel() {
     document.getElementById("alt").style.display="none";
 }
 
-function next_page() {
+function next_page(students) {
     if (parseInt(document.getElementById("current_page").value)
     <parseInt(document.getElementById("page").value)){
         document.getElementById("current_page").value=parseInt(document.getElementById("current_page").value)+1;
@@ -226,7 +226,7 @@ function next_page() {
 
 }
 
-function last_page() {
+function last_page(students) {
     if (parseInt(document.getElementById("current_page").value)
         >1){
         document.getElementById("current_page").value=parseInt(document.getElementById("current_page").value)-1;
@@ -240,7 +240,9 @@ function last_page() {
 
 function refresh_data() {
     save_data(init_data())
-    var students = localStorage.my_data;
-    students=JSON.parse(students);
+    students = localStorage.my_data;
+    students = JSON.parse(students);
+    document.getElementById("page").value=2;
+    document.getElementById("current_page").value=1;
     print_table(students);
 }
