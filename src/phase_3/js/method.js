@@ -239,10 +239,13 @@ function last_page(students) {
 }
 
 function refresh_data() {
-    save_data(init_data())
-    students = localStorage.my_data;
-    students = JSON.parse(students);
-    document.getElementById("page").value=2;
-    document.getElementById("current_page").value=1;
-    print_table(students);
+    let r=confirm("确认初始化数据？")
+    if (r===true){
+        save_data(init_data())
+        students = localStorage.my_data;
+        students = JSON.parse(students);
+        document.getElementById("page").value=2;
+        document.getElementById("current_page").value=1;
+        print_table(students);
+    }
 }
