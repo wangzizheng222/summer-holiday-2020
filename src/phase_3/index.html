@@ -12,14 +12,15 @@
 
 <header>
     <h1 class="header_h1">学生信息管理系统</h1>
-    <input hidden id="page" value="2">
-    <input hidden id="current_page" value="1">
 </header>
 
 <div class="control_button">
     <button class="btn" onclick="show_add()" id="add_button">新增</button>
     <button class="btn" onclick="remove(students)" id="remove_button">删除</button>
     <button class="btn" onclick="refresh_data()">初始化数据</button>
+    <input hidden id="page" value="2">
+    <input id="current_page" value="1">
+    <button class="btn" onclick="print_table(students)" id="turnTo">跳转页面</button>
     <button class="btn" onclick="next_page(students)" id="next_button">下一页</button>
     <button class="btn" onclick="last_page(students)" id="last_button">上一页</button>
 </div>
