@@ -3,95 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <title>Exercise_2</title>
+
+
+    <style>
+        .title{
+            background-color: darkgrey;
+            height: 40px;
+            margin: 0 auto;
+            line-height: 40px;
+        }
+        label,img,p{
+            line-height: 50px;
+        }
+    </style>
+
 </head>
 <body>
-<p>产品基本信息</p>
+<p class="title">产品基本信息</p>
 
+<div id="value">
+    <label style="color: red;padding-left: 400px">*</label>
 <label>产品名称</label><label>
-    <input type="text">
+    <img src="blue_img.PNG" width="20" height="20" alt="blue">
+    <input type="text" placeholder="如：PU女士手提包">
 </label>
 <br>
+
+    <label style="color: red;padding-left: 400px">*</label>
 <label>产品型号</label><label>
+    <img src="blue_img.PNG" width="20" height="20" alt="blue">
     <input type="text">
 </label>
 <br>
-<label>产品图片</label><label>
-    <input type="radio"><label>上传单张图片</label>
-    <input type="radio"><label>上传多张图片</label>
+<label style="padding-left: 412px">产品图片</label><label>
+    <img src="blue_img.PNG" width="20" height="20" alt="blue">
+    <input type="radio" name="pic_upload"><label>上传单张图片</label>
+    <label>
+        <input type="radio" name="pic_upload">
+    </label><label>上传多张图片</label>
     <label>您已提交10个多图产品，还可以提交0个</label>
 </label>
 <br>
-<button>本地上传</button>
-<button>从图片库选取</button>
+    <div style="padding-left: 505px">
+        <button>本地上传</button>
+        <button>从图片库选取</button>
+    </div>
+
+    <div style="padding-left: 505px">
+        <p style="font-weight: 100">最多添加10个多图产品，每个多图产品最多展示6张图片</p>
+        <p style="font-weight: 100">jpg或jpeg格式，不超过300k</p>
+    </div>
+    <label style="color: red;padding-left: 415px">*</label>
+    <label>关键词</label><label>
+    <img src="blue_img.PNG" width="20" height="20" alt="blue">
+    <input type="text">
+</label>
+<a style="color: blue">关键词建议</a>
 <br>
-<p>最多添加10个多图产品，每个多图产品最多展示6张图片</p>
-<p>jpg或jpeg格式，不超过300k</p>
-<label>关键词</label><input type="text">
-<a>关键词建议</a>
-<br>
-<a>添加逻辑关键词</a>
-<p>请在每个文本框中输入一个用于描述您产品的关键词，并控制在48个字符以内</p>
+<a style="padding-left: 505px;color: blue">添加更多关键词</a>
+<p style="padding-left: 505px;font-weight: 100">请在每个文本框中输入一个用于描述您产品的关键词，并控制在48个字符以内</p>
+    <label style="color: red;padding-left: 425px">*</label>
 <label>产品类别</label>
 <button>选择目录</button><label>找不到想要的目录？</label>
-<a>点这里</a>
+<a style="color: blue">点这里</a>
 <br>
-<label>产品分组</label>
-<select>
-    <option></option>
-</select>
-<br>
-<label>产品描述</label>
-<input type="radio"><label>富文本</label>
-<input type="radio"><label>纯文本</label>
-<label>您已提交23个富文本产品，还可继续提交</label>
-<br>
-<textarea>
 
-</textarea>
+<label style="padding-left: 437px">产品分组</label>
+    <label>
+        <select>
+            <option>请选择产品分组</option>
+        </select>
+    </label>
+    <br>
 
-<p>产品贸易</p>
+
+</div>
+
+<p class="title">产品贸易
+    <label style="font-weight: 100">详细填写您的报价，让其更易被买家关注</label>
+    <label style="padding-left: 1000px">
+        <input type="checkbox">
+    </label><label style="font-weight: 100">可洽谈</label>
+</p>
+<label style="color: red;padding-left: 413px">*</label>
 <label>最小起订量</label><input type="text">
-<select>
-    <option>个</option>
-</select>
+<label>
+    <select style="width: 100px">
+        <option>个</option>
+    </select>
+</label>
 <label>FOB价格（U8D）</label>
-<select>
-    <option>个</option>
-</select>
+<label>
+    <select style="width: 100px">
+        <option>个</option>
+    </select>
+</label>
 <br>
-<a>添加价格区间</a>
-<label>港口</label><input type="text">
+<a style="padding-left: 510px;color: blue">添加价格区间</a>
 <br>
+<label style="padding-left: 473px">港口</label><input type="text">
+<br>
+<label style="color: red;padding-left: 420px">*</label>
 <label>支付方式</label>
 
-<input type="checkbox"><label>UC</label>
-<input type="checkbox"><label>T/T</label>
-<input type="checkbox"><label>D/P</label>
-<input type="checkbox"><label>Paypal</label>
-<input type="checkbox"><label>Money Gram</label>
-<input type="checkbox"><label>Western Union</label>
-<input type="checkbox"><label>Others</label>
+
+<label>
+    <input type="checkbox">
+</label><label>UC</label>
+<label>
+    <input type="checkbox">
+</label><label>T/T</label>
+<label>
+    <input type="checkbox">
+</label><label>D/P</label>
+<label>
+    <input type="checkbox">
+</label><label>Paypal</label>
+<label>
+    <input type="checkbox">
+</label><label>Money Gram</label>
+<label>
+    <input type="checkbox">
+</label><label>Western Union</label>
+<label>
+    <input type="checkbox">
+</label><label>Others</label>
 <br>
 
-<p>展示字段自定义</p>
-<label>交易条件</label>
-<input type="checkbox"><label>港口</label>
-<input type="checkbox"><label>支付方式</label>
+
+<p class="title">展示字段自定义
+    <img src="blue_img.PNG" width="20" height="20" alt="blue">
+    <label style="font-weight: 100">可以从产品属性、自定义属性、交易条件中选择2个自定义信息用于展示厅产品介绍页面的优先展示</label>
+</p>
+<label style="padding-left: 430px">交易条件</label>
+<label>
+    <input type="checkbox">
+</label><label>港口</label>
+<label>
+    <input type="checkbox">
+</label><label>支付方式</label>
 <br>
-<label>产品属性</label>
-<input type="checkbox"><label>外观</label>
-<input type="checkbox"><label>应用</label>
-<input type="checkbox"><label>成分</label>
-<input type="checkbox"><label>目标市场</label>
+<label style="padding-left: 430px">产品属性</label>
+<label>
+    <input type="checkbox">
+</label><label>外观</label>
+<label>
+    <input type="checkbox">
+</label><label>应用</label>
+<label>
+    <input type="checkbox">
+</label><label>成分</label>
+<label>
+    <input type="checkbox">
+</label><label>目标市场</label>
+
 <br>
-<label>自定义属性</label>
-<input type="checkbox"><label>FOB</label>
-<input type="checkbox"><label>CFR</label>
-<input type="checkbox"><label>CIF</label>
-<input type="checkbox"><label>DAT</label>
-<input type="checkbox"><label>FAS</label>
-<input type="checkbox"><label>DDP</label>
-<input type="checkbox"><label>DAP</label>
-<input type="checkbox"><label>FOB</label>
+
+<label style="padding-left: 413px">自定义属性</label>
+<label>
+    <input type="checkbox">
+</label><label>FOB</label>
+<label>
+    <input type="checkbox">
+</label><label>CFR</label>
+<label>
+    <input type="checkbox">
+</label><label>CIF</label>
+<label>
+    <input type="checkbox">
+</label><label>DAT</label>
+<label>
+    <input type="checkbox">
+</label><label>FAS</label>
+<label>
+    <input type="checkbox">
+</label><label>DDP</label>
+<label>
+    <input type="checkbox">
+</label><label>DAP</label>
+<label>
+    <input type="checkbox">
+</label><label>FOB</label>
 </body>
 </html>
