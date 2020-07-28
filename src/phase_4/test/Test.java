@@ -17,10 +17,10 @@ public class Test {
         Daoimpl daoimpl=new Daoimpl();
         ClassDao classDao=new ClassDaoImpl();
 
-        Class my_class =new Class();
-        my_class.setName("wzz");
-        my_class.setGrade("19");
-        classDao.add(my_class);
+        // Class my_class =new Class();
+        // my_class.setName("wzz");
+        // my_class.setGrade("19");
+        // classDao.add(my_class);
         // Student student=new Student();
         // student.setId(2);
         // student.setName("wzz");

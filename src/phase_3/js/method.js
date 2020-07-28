@@ -63,12 +63,14 @@ function show_add() {
 
 function remove(students) {
     const id_checkbox = document.getElementsByName("id_checkbox");
+    var correct_number=parseInt(document.getElementById("current_page").value)*10-10;
     const r = confirm("确定删除所选项？");
     if (r===true){
         let j=0;
         for(let i = 0; i < id_checkbox.length; i++){
             if(id_checkbox[i].checked){
-                students.splice(j,1);
+                students.splice(j+correct_number,1);
+                alert(j);
             }
             else {
                 j=j+1;
